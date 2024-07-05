@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins' ,sans-serif;
+            box-sizing: border-box;
+            
+        }
+        .body{
+            background-color: black; 
+            align-items: center;
+            overflow-x: hidden;
+        }
+        .maindiv{
+            width:100%;
+            height:100%;
+
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("image.jpg");
+        
+            padding-bottom: 20px;
+        
+        }
+        .maindiv .navdiv .logo img{
+            width: 120px;
+            height: 50px;  
+        }
+        .maindiv .navdiv{
+            display: flex;
+            justify-content: space-between;
+        }
+        .maindiv .navdiv .authdiv{
+            
+            color: white;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+            margin:10px;
+            padding: 5px;
+            padding-right: 15%;
+            margin-right: 50px;
+        }
+        .maindiv .navdiv .authdiv .lanuage{
+            border-radius: 10px;
+            border-color: white;
+            padding: 10px;
+            padding-right: 6%;
+        }
+        .maindiv .navdiv .authdiv .login{
+            
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 10px;
+            margin-top: 2px;
+            width: 10%;
+        }
+        .maindiv .navdiv .authdiv .login .btn{
+            background-color: red;
+            border-radius: 5px;
+            height: 25px;
+            width: 50px;
+        }
+        .maindiv .content .contentt{
+    
+            color: white;
+            align-items: center;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 4%;
+        }
+        .maindiv .content .contentt{
+            font-size: 22px;
+        }
+        .maindiv .det{
+            
+            text-align: center;
+        
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 60px;
+        }
+        .maindiv .det .input{
+
+            padding: 10px;
+            border-radius: 3px;
+
+        }
+        .maindiv .content .det .btn{
+            background-color: red;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+
+
+        }
+        .pg2{
+            background-color: black;
+            margin-top: 30px;
+        }
+        .pg2{
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 5%;
+
+            padding-right:10% ;
+            padding-left: 10%;
+            padding-bottom: 5%;
+            font-size:25px ;
+        }
+        .pg2 .pg2img{
+            margin-left: 60px;
+
+
+        }
+        .pg3{
+            background-color: black;
+        }
+        .pg3{
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 5%;
+            padding-right: 10%;
+            font-size: 25px;
+        }
+        .pg4{
+            background-color: black;
+
+        }
+        .pg4{
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 3%;
+            padding-right: 10%;
+            font-size: 25px;
+
+        }
+        .pg5{
+            background-color: black;
+        }
+        .pg5{
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 5%;
+            padding-right: 10%;
+            font-size: 25px;
+        }
+
+        .ques{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5%;
+            font-size: 20px;
+            height: 30%;
+        }
+        .ques .freq1{
+            height: 40px;
+            background-color: rgb(87, 81, 81);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 5px;
+            padding-right: 20%;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        .ques .freq2{
+            height: 40px;
+            background-color: rgb(87, 81, 81);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 5px;
+            padding-right: 20%;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        .ques .freq3{
+            height: 40px;
+            background-color: rgb(87, 81, 81);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 5px;
+            padding-right: 20%;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        .ques .freq4{
+            height: 40px;
+            background-color: rgb(87, 81, 81);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 5px;
+            padding-right: 20%;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        .ques .freq5{
+            height: 40px;
+            background-color: rgb(87, 81, 81);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 5px;
+            padding-right: 20%;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        .ques .freq6{
+            height: 40px;
+            background-color: rgb(87, 81, 81);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 5px;
+            padding-right: 20%;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        .freq1:hover{
+                background-color: rgb(58, 47, 47) ;
+
+        }
+        .freq2:hover{
+                background-color: rgb(58, 47, 47) ;
+        }
+        .freq3:hover{
+                background-color: rgb(58, 47, 47) ;
+        }
+        .freq4:hover{
+                background-color: rgb(58, 47, 47) ;
+        }
+        .freq5:hover{
+                background-color: rgb(58, 47, 47) ;
+        }
+        .freq6:hover{
+                background-color: rgb(58, 47, 47) ;
+        }
+        .authen .ready{
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-size: 25px;
+        }
+        .authen .det1{
+                background-color: black;
+                color: white;
+                text-align: center;
+                align-items: center;
+                font-size: 25px;
+        }
+        .authen .det1 .input{
+            
+                padding: 10px;
+                border-radius: 3px;
+                margin-top: 20px;
+        }
+        .authen .det1 .butn{
+                background-color: red;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+        }
+        .final{
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding-top: 40px;
+                font-size: 25px;
+
+        }
+        @media screen  and (max-width:740px) {
+            .pg2{
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+            }
+           .pg3{
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+            }
+            .pg4{
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+            }
+            .pg5{
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+            }
+            .pg6{
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+            }
+        }
+
+    </style>
+    </head>
+
+    <body>
+        <div class="maindiv">
+            
+            
+            <div class ="navdiv">
+                <div class="logo">
+                    <img src="../day1/netfliximage.jpg" alt="">
+                </div>
+                <div class="authdiv">
+                    <div class="lanuage">
+                     <p>English</p>
+                    </div>
+                    <div class="login">
+
+                     <button class="btn">sig in</button>
+                    </div>
+
+                </div>
+            </div>
+
+                <div class="content">
+                    <div class="contentt">
+
+
+                    <h1> Unlimited movies, TV shows and more</h1>
+                    <p>Watch anywhere. Cancel anytime.</p>
+                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                    </div>
+                    
+                </div>
+                <div class="det">
+                    <input type="email" placeholder="sample@gmail.com">
+                    <button>Get Started</button>
+
+
+                </div>
+        </div>
+             <div class="pg2">
+             <div class="pg2text">
+                    <h1>Enjoy on your TV</h1>
+                    <br>
+                    <br>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast,<br>Apple TV, Blu-ray players and more.</p>
+
+                </div>
+                <div class="pg2img">
+                    <img src="img1.jpg" height="100%" width="100%">
+
+                </div>
+
+        </div>
+                
+        <hr>
+        <div class="pg3">
+               
+            <div class="pg3img">
+                <img src="img2.jpg" alt="">
+            </div>
+            <div class="pg3text">
+                <h1>Download your shows<br> to watch offline</h1>
+                <br>
+                <br>
+                <p>Save your favourites easily and always have something<br>to watch.</p>
+
+            </div>
+        </div>
+        <hr>
+        <div class="pg4">
+            <div class="pg4text">
+                <h1>Watch everywhere</h1>
+                <br>
+                <br>
+                <p>Stream unlimited movies and TV shows on your<br> phone, tablet, laptop, and TV.</p>
+            </div>    
+            <div class="pg4img">
+                <img src="img3.jpg" alt="">
+            </div>
+        </div>
+        <hr>
+
+        <div class="pg5">
+            <div class="pg5img">
+                <img src="img4.jpg" alt="">
+            </div>
+                <div class="pg5text">
+                    <h1>Create profiles for kids</h1>
+                    <br>
+                    <br>
+                    <p>Send children on adventures with their favourite<br> characters in a space made just for them—free with <br>your membership.</p>
+
+                </div>
+    
+        </div>
+        <hr>
+
+        <div class="ques">
+        <h1>"Frequently Asked Questions"</h1>
+        <br>
+        <div class="freq1">
+            <p>What  is Netflix?</p>
+            <p>+</p>
+        </div>
+        <br>
+        <div class="freq2">
+            <p>How much does Netflix cost?</p>
+            <p>+</p>
+        </div>
+        <br>
+        <div class="freq3">
+            <p>Where can I watch?</p>
+            <p>+</p>
+        </div>
+        <br>
+        <div class="freq4">
+            <p>How do I cancel?</p>
+            <p>+</p>
+        </div>
+        <br>
+        <div class="freq5">
+            <p>Is Netflix good for kids?</p>
+            <p>+</p>
+        </div>
+
+    </div>
+    <div class="authen">
+        <div class="ready">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="det1">
+                <input class="input" type="text" placeholder="Email address">
+                <button class="butn" >Get Started</button>
+            </div>
+        </div>
+    </div>
+    <hr> 
+    <div class="final">
+        <p>&copy;Designed by Usha Sundari Devi</p>
+    </div>
+</body>
+</html>
